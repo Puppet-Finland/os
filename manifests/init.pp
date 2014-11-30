@@ -5,6 +5,7 @@
 # places where you need to use the OS abstraction this module provides. Note 
 # that this module only augments the per-module params classes.
 #
-class os {
-    # Empty
+class os inherits os::params {
+
+    # Nothing interesting here
 }
