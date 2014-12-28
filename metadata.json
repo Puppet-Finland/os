@@ -1,0 +1,10 @@
+{
+  "name": "puppetfinland-os",
+  "version": "0.5.0",
+  "author": "Puppet-Finland team",
+  "license": "BSD license",
+  "summary": "Setup various OS-specific parameters"
+  "source": "https://github.com/Puppet-Finland/os.git",
+  "project_page": "https://github.com/Puppet-Finland/os",
+  "dependencies": [ ]
+}
