@@ -10,15 +10,28 @@ class os::params {
 
     if $osfamily == 'RedHat' {
         $package_install_cmd = 'rpm -i'
+        $adminuser = 'root'
         $admingroup = 'root'
+        $home = '/home'
 
     } elsif $osfamily == 'Debian' {
         $package_install_cmd = 'dpkg -i'
+        $adminuser = 'root'
         $admingroup = 'root'
+        $home = '/home'
 
     } elsif $osfamily == 'FreeBSD' {
         $package_install_cmd = 'pkg add'
+        $adminuser = 'root'
         $admingroup = 'wheel'
+        $home = '/home'
+
+    } elsif $osfamily == 'windows' {
+        $package_install_cmd = 'choco install'
+        $adminuser = 'Administrator'
+        $admingroup = 'Administrators'
+        $home = '/c/users/'
+        $home_bs = 'c:\users'
 
     } else {
         fail("Unsupported OS: ${::osfamily}")
