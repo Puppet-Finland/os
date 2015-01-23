@@ -27,6 +27,8 @@ class os::params {
         $home = '/home'
 
     } elsif $osfamily == 'windows' {
+        # Suggested by Puppetlabs documentation
+        File { source_permissions => ignore }
         $package_install_cmd = 'choco install'
         $adminuser = 'Administrator'
         $admingroup = 'Administrators'
