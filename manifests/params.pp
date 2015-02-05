@@ -13,18 +13,21 @@ class os::params {
         $adminuser = 'root'
         $admingroup = 'root'
         $home = '/home'
+        $package_provider = undef
 
     } elsif $osfamily == 'Debian' {
         $package_install_cmd = 'dpkg -i'
         $adminuser = 'root'
         $admingroup = 'root'
         $home = '/home'
+        $package_provider = undef
 
     } elsif $osfamily == 'FreeBSD' {
         $package_install_cmd = 'pkg add'
         $adminuser = 'root'
         $admingroup = 'wheel'
         $home = '/home'
+        $package_provider = undef
 
     } elsif $osfamily == 'windows' {
         # Suggested by Puppetlabs documentation
@@ -34,6 +37,7 @@ class os::params {
         $admingroup = "${::hostname}\None"
         $home = '/c/users/'
         $home_bs = 'c:\users'
+        $package_provider = 'chocolatey'
 
     } else {
         fail("Unsupported OS: ${::osfamily}")
