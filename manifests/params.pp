@@ -14,6 +14,8 @@ class os::params {
         $admingroup = 'root'
         $home = '/home'
         $package_provider = undef
+        $service_cmd = '/sbin/service'
+        $systemctl = '/usr/bin/systemctl'
 
     } elsif $osfamily == 'Debian' {
         $package_install_cmd = 'dpkg -i'
@@ -21,6 +23,8 @@ class os::params {
         $admingroup = 'root'
         $home = '/home'
         $package_provider = undef
+        $service_cmd = '/usr/sbin/service'
+        $systemctl = '/bin/systemctl'
 
     } elsif $osfamily == 'FreeBSD' {
         $package_install_cmd = 'pkg add'
@@ -28,13 +32,14 @@ class os::params {
         $admingroup = 'wheel'
         $home = '/home'
         $package_provider = undef
+        $service_cmd = '/usr/sbin/service'
 
     } elsif $osfamily == 'windows' {
         # Suggested by Puppetlabs documentation
         File { source_permissions => ignore }
         $package_install_cmd = 'choco install'
         $adminuser = 'BUILTIN\Administrators'
-        $admingroup = "${::hostname}\None"
+        $admingroup = "${::hostname}\\None"
         $home = '/c/users/'
         $home_bs = 'c:\users'
         $package_provider = 'chocolatey'
