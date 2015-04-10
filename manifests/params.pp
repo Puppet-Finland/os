@@ -16,6 +16,7 @@ class os::params {
         $package_provider = undef
         $service_cmd = '/sbin/service'
         $systemctl = '/usr/bin/systemctl'
+        $kill_cmd = '/usr/bin/kill'
 
     } elsif $osfamily == 'Debian' {
         $package_install_cmd = 'dpkg -i'
@@ -25,6 +26,7 @@ class os::params {
         $package_provider = undef
         $service_cmd = '/usr/sbin/service'
         $systemctl = '/bin/systemctl'
+        $kill_cmd = '/bin/kill'
 
     } elsif $osfamily == 'FreeBSD' {
         $package_install_cmd = 'pkg add'
@@ -33,6 +35,7 @@ class os::params {
         $home = '/home'
         $package_provider = undef
         $service_cmd = '/usr/sbin/service'
+        $kill_cmd = '/bin/kill'
 
     } elsif $osfamily == 'windows' {
         # Suggested by Puppetlabs documentation
