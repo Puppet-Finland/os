@@ -8,36 +8,42 @@
 #
 class os::params {
 
-    if $osfamily == 'RedHat' {
+    if $::osfamily == 'RedHat' {
         $package_install_cmd = 'rpm -i'
         $adminuser = 'root'
         $admingroup = 'root'
+        $sudogroup = 'wheel'
         $home = '/home'
         $package_provider = undef
         $service_cmd = '/sbin/service'
         $systemctl = '/usr/bin/systemctl'
         $kill_cmd = '/usr/bin/kill'
+        $interactive_shell = '/bin/bash'
 
-    } elsif $osfamily == 'Debian' {
+    } elsif $::osfamily == 'Debian' {
         $package_install_cmd = 'dpkg -i'
         $adminuser = 'root'
         $admingroup = 'root'
+        $sudogroup = 'sudo'
         $home = '/home'
         $package_provider = undef
         $service_cmd = '/usr/sbin/service'
         $systemctl = '/bin/systemctl'
         $kill_cmd = '/bin/kill'
+        $interactive_shell = '/bin/bash'
 
-    } elsif $osfamily == 'FreeBSD' {
+    } elsif $::osfamily == 'FreeBSD' {
         $package_install_cmd = 'pkg add'
         $adminuser = 'root'
         $admingroup = 'wheel'
+        $sudogroup = 'wheel'
         $home = '/home'
         $package_provider = undef
         $service_cmd = '/usr/sbin/service'
         $kill_cmd = '/bin/kill'
+        $interactive_shell = '/bin/csh'
 
-    } elsif $osfamily == 'windows' {
+    } elsif $::osfamily == 'windows' {
         # Suggested by Puppetlabs documentation
         File { source_permissions => ignore }
         $package_install_cmd = 'choco install'
@@ -49,5 +55,5 @@ class os::params {
 
     } else {
         fail("Unsupported OS: ${::osfamily}")
-    } 
+    }
 }
