@@ -1,6 +1,6 @@
 {
   "name": "puppetfinland-os",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "author": "Puppet-Finland team",
   "license": "BSD license",
   "summary": "Setup various OS-specific parameters",

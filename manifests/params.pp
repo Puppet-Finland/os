@@ -14,6 +14,7 @@ class os::params {
         $admingroup = 'root'
         $sudogroup = 'wheel'
         $home = '/home'
+        $root_home = '/root'
         $package_provider = undef
         $service_cmd = '/sbin/service'
         $systemctl = '/usr/bin/systemctl'
@@ -26,6 +27,7 @@ class os::params {
         $admingroup = 'root'
         $sudogroup = 'sudo'
         $home = '/home'
+        $root_home = '/root'
         $package_provider = undef
         $service_cmd = '/usr/sbin/service'
         $systemctl = '/bin/systemctl'
@@ -38,6 +40,7 @@ class os::params {
         $admingroup = 'wheel'
         $sudogroup = 'wheel'
         $home = '/home'
+        $root_home = '/root'
         $package_provider = undef
         $service_cmd = '/usr/sbin/service'
         $kill_cmd = '/bin/kill'
