@@ -50,8 +50,8 @@ class os::params {
         # Suggested by Puppetlabs documentation
         File { source_permissions => ignore }
         $package_install_cmd = 'choco install'
-        $adminuser = 'BUILTIN\Administrators'
-        $admingroup = "${::hostname}\\None"
+        $adminuser = undef
+        $admingroup = undef
         $home = '/c/users/'
         $home_bs = 'c:\users'
         $package_provider = 'chocolatey'
