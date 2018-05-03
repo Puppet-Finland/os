@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Puppet-Finland/puppet-os.svg?branch=master)](https://travis-ci.org/Puppet-Finland/puppet-os)
+
 # os
 
 A support module that contains operating system-specific parameters for use in 
