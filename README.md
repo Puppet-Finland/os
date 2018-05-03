@@ -7,13 +7,8 @@ other modules. All the interesting stuff is in ::os::params.
 
 # Module usage
 
-* [Class: os](manifests/init.pp)
-* [Class: os::params](manifests/params.pp)
+To use this module just
 
-# Dependencies
+    include ::os
 
-See [metadata.json](metadata.json).
-
-# Operating system support
-
-Check [metadata.json](metadata.json).
+and make use of the parameters in [::os::params](manifests/params.pp)
