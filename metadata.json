@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "author": "Puppet-Finland team",
   "summary": "Setup various OS-specific parameters",
-  "license": "BSD license",
+  "license": "BSD-2-Clause",
   "source": "https://github.com/Puppet-Finland/puppet-os.git",
   "project_page": "https://github.com/Puppet-Finland/puppet-os",
   "dependencies": [
