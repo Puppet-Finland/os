@@ -54,7 +54,7 @@ class os::params {
     $home = '/Users'
     $root_home = '/var/root'
     $package_provider = undef
-    $service_cmd = '/bin/launchctl'
+    $service_cmd = undef
     $kill_cmd = '/bin/kill'
     $interactive_shell = '/bin/bash'
 
